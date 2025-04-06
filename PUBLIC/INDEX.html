@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Diet Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Exercise Diet Planner</h1>
+        <form id="dietForm">
+            <label for="ageCategory">Age Category:</label>
+            <select id="ageCategory" required>
+                <option value="under_18">Under 18</option>
+                <option value="18_25">18-25</option>
+                <option value="26_35">26-35</option>
+                <option value="36_50">36-50</option>
+                <option value="over_50">Over 50</option>
+            </select>
+
+            <label for="currentWeight">Current Weight (kg):</label>
+            <input type="number" id="currentWeight" required>
+
+            <label for="targetWeight">Target Weight (kg):</label>
+            <input type="number" id="targetWeight" required>
+
+            <label for="exerciseSchedule">Exercise Schedule (JSON format):</label>
+            <textarea id="exerciseSchedule" required placeholder='{"type": "running", "duration": "30", "frequency": "3"}'></textarea>
+
+            <button type="submit">Get Diet Plan</button>
+        </form>
+
+        <div id="dietPlan"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
